@@ -1,0 +1,24 @@
+---
+import GlobalStyles from '../styles/global.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+		<!-- Load AlpineJS on the page -->
+		<script>
+			import Alpine from 'alpinejs';
+			window.Alpine = Alpine;
+			Alpine.start();
+		</script>
+    <GlobalStyles />
+	</head>
+	<body class="bg-white dark:bg-slate-800">
+		<main class="max-w-screen-sm mx-auto p-8">
+			<slot></slot>
+		</main>
+  </body>
+</html>

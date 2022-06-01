@@ -1,0 +1,20 @@
+---
+import Layout from '../../layout/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    // Generates: /dogs/clifford
+    {params: {sku: 'sku-1'}},
+    // Generates: /dogs/rover
+    {params: {sku: 'sku-2'}},
+    // Generates: /dogs/spot
+    {params: {sku: 'sku-3'}},
+  ];
+}
+
+const {sku} = Astro.params;
+---
+
+<Layout>
+  <h1 class="text-2xl text-black dark:text-white">{sku}</h1>
+</Layout>

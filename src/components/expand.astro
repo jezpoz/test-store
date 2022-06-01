@@ -1,0 +1,10 @@
+---
+const { label = "Toggle" } = Astro.props;
+---
+<div class="text-black dark:text-white" x-data="{ open: false }">
+  <button @click="open = ! open">{label}</button>
+
+  <div x-show="open" @click.outside="open = false">
+    <slot></slot>
+  </div>
+</div>
