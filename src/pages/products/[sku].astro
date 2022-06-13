@@ -3,11 +3,8 @@ import Layout from '../../layout/Layout.astro';
 
 export function getStaticPaths() {
   return [
-    // Generates: /dogs/clifford
     {params: {sku: 'sku-1'}},
-    // Generates: /dogs/rover
     {params: {sku: 'sku-2'}},
-    // Generates: /dogs/spot
     {params: {sku: 'sku-3'}},
   ];
 }
